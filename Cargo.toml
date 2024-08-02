@@ -1,5 +1,5 @@
 [package]
-name = "static_ri"
+name = "ri"
 version = "0.1.0"
 edition = "2021"
 
