@@ -12,7 +12,7 @@ use tracing::debug;
 use tracing_subscriber::EnvFilter;
 
 use dace::ast::{LoopBound, LoopStmt, Node, Stmt};
-use static_ri::tracing_ri;
+use ri::tracing_ri;
 
 mod test;
 

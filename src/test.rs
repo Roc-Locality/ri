@@ -4,7 +4,7 @@ mod tests {
     use dace::ast::Node;
     use dace::construct;
     use dace_tests::polybench_simplify;
-    use static_ri::tracing_ri;
+    use ri::tracing_ri;
 
     #[test]
     fn test_poly() {
