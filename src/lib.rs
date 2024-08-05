@@ -73,7 +73,7 @@ fn record_access_trace(ary_ref: &AryRef, ri: Option<usize>, addr: u64, counter: 
         .unwrap();
 
     if file.metadata().unwrap().len() == 0 {
-        let header = "Ref ID,Reuse Interval,Address,Counter\n";
+        let header = "ref_id,backward_ri,address,counter\n";
         file.write_all(header.as_bytes()).unwrap();
     }
 
