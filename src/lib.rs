@@ -80,9 +80,9 @@ fn record_access_trace(ary_ref: &AryRef, ri: Option<usize>, addr: u64, counter: 
     let trace_info = format!(
         // "{},{},{},{},{}\n",
         // ary_ref.name,
-        "{},{},{},{}\n",
+        "{:08x},{:08x},{:08x},{}\n",
         ary_ref.ref_id.unwrap_or(usize::MAX),
-        ri.unwrap_or(usize::MAX), // TODO: handle None with danning recursion
+        ri.unwrap_or(u32::MAX as usize), // TODO: handle None with danning recursion
         addr,
         counter
     );
