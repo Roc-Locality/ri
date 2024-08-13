@@ -49,7 +49,7 @@ pub fn access3addr(
 
 pub fn assign_ref_id(node: &Rc<Node>) {
     println!("Assigning ID...");
-    let mut counter = 1;
+    let mut counter = 0;
     Walk::new(node)
         .filter(|node| matches!(&node.stmt, Stmt::Ref(_)))
         .for_each(|mut node| {
@@ -107,7 +107,7 @@ impl<'a> TracingContext<'a> {
             hist: Hist::new(),
             ivec: vec![],
             code,
-            counter: 0,
+            counter: 1,
             ds,
             cls, //64
             record_trace: false,
