@@ -49,7 +49,7 @@ pub fn access3addr(
 
 pub fn assign_ref_id(node: &Rc<Node>) {
     println!("Assigning ID...");
-    let mut counter = 0;
+    let mut counter = 1;
     Walk::new(node)
         .filter(|node| matches!(&node.stmt, Stmt::Ref(_)))
         .for_each(|mut node| {
